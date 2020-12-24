@@ -58,8 +58,8 @@ def get_balance(bal_file):
 
 def telebot_send(message):
 
-   bot_token = '1422861121:AAHIFrQ8KFTrRXOVnPU6auxibSlqtXRUA3s'
-   bot_chatID = '-422568682'
+   bot_token = 'your_bot_token'
+   bot_chatID = 'your_chat_ID'
    send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + message
 
    response = requests.get(send_text)
