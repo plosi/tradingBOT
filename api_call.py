@@ -8,7 +8,7 @@ from os import path
 import datetime
 
 output_csv = "btc_data.csv"
-API_KEY = 'RP91FSBGEX0QH9OH'
+API_KEY = 'secret_api_key'
 
 class callAPI():
 	"""
