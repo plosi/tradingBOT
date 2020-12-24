@@ -1,0 +1,1 @@
+Simple python app that makes an API call to alphavantage to retrieve the exchange rate from BTC to EUR and simulate trading based on MACD strategy. Graphs are generated and displayed using plotly dash.
