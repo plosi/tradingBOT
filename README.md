@@ -1,7 +1,7 @@
 # Overview
 Simple python app that makes an API call to alphavantage to retrieve the exchange rate from BTC to EUR and simulate trading based on MACD strategy. Graphs are generated and displayed using plotly dash.
 
-There is an issue that I didn't account for when you run the app in a docker container. Basically it looks like the dash app goes to sleep and in fact the update part that should run in the background doesn't work. The workaround is to make an update script which is not called directly by the dash app but that can be called via crontab, and then to make it available on the host computer by mounting a volume when running the container.
+There is an issue when you run the app in a docker container, that I didn't know at the beginning. Basically it looks like the dash app goes to sleep when there are no clients connected, and in fact the interval update callback function stops. So if you put the fucntion to make the API call in the dash app, this will work only as long as there is a client connected to the webpage. The workaround is to make a script which is not called directly by the dash app but that can be called via crontab, and then to make it available on the host computer by mounting a volume when running the container.
 
 # Set-up instructions
 
